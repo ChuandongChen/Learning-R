@@ -1,0 +1,36 @@
+# Chap 7 String and Factors
+
+# 给一串字符添加同一个尾巴
+paste(c("red", "yellow"), "lorry")
+paste(c("red", "yellow"), "lorry", sep = "-")
+paste(c("red", "yellow"), "lorry", collapse = ",")
+paste0(c("red", "yellow"), "lorry")
+
+# 对string去除引号
+(noquoteexp <- noquote(c("aa", "b", "c")))
+
+# 大小写转换
+toupper("I am Shouting")
+tolower("I am Shouting")
+
+# 分割strings
+woodchuck <- c(
+"How much wood would a woodchuck chuck",
+"If a woodchuck could chuck wood?",
+"He would chuck, he would, as much as he could",
+"And chuck as much wood as a woodchuck would",
+"If a woodchuck could chuck wood."
+)
+strsplit(woodchuck, " ", fixed = TRUE)
+
+
+
+# Exercise
+# 1 显示 pi 的 16 位有效数字
+(pi_16 <- formatC(pi, digits = 16))
+
+# 2 将以下字符串分割成单词，删除任何逗号或连字符:
+# x <- c("Swan swam over the pond, Swim swan swim!", "Swan swam back again - Well swum swan!")
+
+strsplit(x <- c("Swan swam over the pond, Swim swan swim!", "Swan swam back again - Well swum swan!"), " ", ",?", "-?")
+
